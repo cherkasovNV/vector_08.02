@@ -1,0 +1,12 @@
+---
+# конфиги складываем в /home но на проде в другие дирректории нужно раскидывать вроде как
+- name: Configure Vector | ensure what directory exists
+  file:
+    path: "{{ vector_config_dir }}"
+    state: directory
+    mode: 0644
+- name: Configure Vector | template config
+  ansible.builtin.template: 
+    src: vector.yml.j2
+    mode: 0644
+    dest: "{{ vector_config_dir }}/vector.yml"

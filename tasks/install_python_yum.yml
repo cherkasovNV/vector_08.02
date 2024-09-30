@@ -1,0 +1,5 @@
+---
+- name: Install Python 3 for CentOS
+  ansible.builtin.yum:
+    name: python3
+    state: present

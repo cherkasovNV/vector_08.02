@@ -1,0 +1,9 @@
+---
+# handlers file for Vector
+- name: restart vector servicecd 
+  command: /usr/bin/vector --config /etc/vector/vector.toml
+#become: true
+  #ansible.builtin.systemd:
+    #name: vector
+    #state: restarted
+    #daemon_reload: true

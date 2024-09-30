@@ -1,0 +1,5 @@
+---
+- name: Converge
+  hosts: all
+  roles:
+    - role: /home/nikita/Netology/Ansible-08.02/Vector
